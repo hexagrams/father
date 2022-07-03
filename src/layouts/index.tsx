@@ -1,53 +1,51 @@
 import React from 'react';
-import Layout from '@/components/Layout';
-import NotFound from '@/components/NotFound';
-import { AppRouter, AppRoute } from '@ice/stark';
-import PageLoading from '@/components/PageLoading';
+import { PageContainer, ProLayout } from '@ant-design/pro-components';
+import { history, IRouteComponentProps } from 'umi';
+import RightContent from '@/components/RightContent';
 
-class Layouts extends React.Component {
-  handleRouteChange() {}
-
-  RenderAppItem() {
-    const { productList = {} } = window?.SYSTEM_CONFIG || {};
-    return Object.keys(productList).map((productCode) => {
-      const item = productList[productCode];
-      return (
-        <AppRoute
-          key={productCode}
-          prefetch
-          rootId="sub-root"
-          hashType="hashbang"
-          {...item?.appConfig}
-        />
-      );
-    });
-  }
-
-  render() {
-    const { routerConfig } = window?.SYSTEM_CONFIG || {};
-
-    return (
-      <div className="father-root">
-        <Layout menuLeftOption={routerConfig?.menuLeftOption}>
-          <AppRouter
-            NotFoundComponent={NotFound}
-            LoadingComponent={PageLoading}
-            onRouteChange={this.handleRouteChange}
-            onAppEnter={(appConfig) => {
-              // 按需记录全局状态
-              // this._ace = window.ace;
-            }}
-            onAppLeave={(appConfig) => {
-              // 按需恢复全局状态
-              // window.ace = this._ace;
-            }}
-          >
-            {this.RenderAppItem()}
-          </AppRouter>
-        </Layout>
-      </div>
-    );
-  }
-}
-
-export default Layouts;
+const Layout = (props: IRouteComponentProps) => {
+  return (
+    <ProLayout
+      title=""
+      logo="https://s1.ax1x.com/2022/07/03/jGJ4bD.png"
+      navTheme="light"
+      iconfontUrl="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"
+      pure={['/home/aaa'].includes(props.location.pathname)}
+      route={{
+        routes: [
+          {
+            path: '/home',
+            name: '收藏',
+            icon: 'icon-shoucang1',
+          },
+          {
+            path: '/home1/overview',
+            name: 'FaceBook',
+            icon: 'icon-facebook',
+          },
+          {
+            path: '/home2/search',
+            name: 'Twitter',
+            icon: 'icon-twitter',
+          },
+        ],
+      }}
+      menuItemRender={(item: { path: string }, dom: React.FC) => (
+        <a
+          onClick={() => {
+            history.push(item.path);
+          }}
+        >
+          {dom}
+        </a>
+      )}
+      rightContentRender={() => <RightContent />}
+      location={{
+        pathname: props.location.pathname,
+      }}
+    >
+      <PageContainer breadcrumbRender={false}>{props.children}</PageContainer>
+    </ProLayout>
+  );
+};
+export default Layout;
