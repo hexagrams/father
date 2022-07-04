@@ -32,7 +32,7 @@ export default () => {
     <div style={{ backgroundColor: 'white', height: 'calc(100vh - 48px)', margin: -24 }}>
       <LoginFormPage
         onFinish={async (values) => {
-          history.push('/home');
+          history.push('/qian/product');
           console.log(values);
         }}
         backgroundImageUrl="https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png"
@@ -188,7 +188,7 @@ export default () => {
                 size: 'large',
               }}
               placeholder={'请输入验证码'}
-              captchaTextRender={(timing: number, count: number) => {
+              captchaTextRender={(timing, count) => {
                 if (timing) {
                   return `${count} ${'获取验证码'}`;
                 }

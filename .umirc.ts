@@ -11,6 +11,9 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  qiankun: {
+    master: {},
+  },
   webpack5: {}, // 启动webpack5
   locale: {
     default: 'zh-CN',

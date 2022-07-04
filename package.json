@@ -1,4 +1,5 @@
 {
+  "name": "father",
   "private": true,
   "scripts": {
     "dev": "umi dev",
@@ -31,6 +32,7 @@
     "antd": "^4.21.5",
     "classnames": "^2.3.1",
     "lint-staged": "^10.0.7",
+    "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "prettier": "^1.19.1",
     "prop-types": "^15.8.1",
@@ -41,6 +43,7 @@
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^5.15.0",
+    "@umijs/plugin-qiankun": "^2.39.2",
     "f2elint": "^2.2.1",
     "typescript": "^4.6.2"
   },

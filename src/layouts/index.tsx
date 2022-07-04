@@ -13,11 +13,11 @@ const Layout = (props: IRouteComponentProps) => {
       logo={logo}
       navTheme="light"
       iconfontUrl="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"
-      pure={['/'].includes(props.location.pathname)}
+      pure={['/login'].includes(props.location.pathname)}
       route={{
         routes: [
           {
-            path: '/home',
+            path: '/qian/product',
             name: '收藏',
             icon: 'icon-shoucang1',
           },
@@ -33,10 +33,10 @@ const Layout = (props: IRouteComponentProps) => {
           },
         ],
       }}
-      menuItemRender={(item: { path: string }, dom: React.FC) => (
+      menuItemRender={(item, dom) => (
         <a
           onClick={() => {
-            history.push(item.path);
+            history.push(item.path || '/');
           }}
         >
           {dom}
