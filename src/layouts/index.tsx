@@ -1,16 +1,19 @@
 import React from 'react';
-import { PageContainer, ProLayout } from '@ant-design/pro-components';
+import { ProLayout } from '@ant-design/pro-components';
 import { history, IRouteComponentProps } from 'umi';
 import RightContent from '@/components/RightContent';
+import logo from '@/static/img/liuiu6661.png';
 
 const Layout = (props: IRouteComponentProps) => {
   return (
     <ProLayout
       title=""
-      logo="https://s1.ax1x.com/2022/07/03/jGJ4bD.png"
+      fixedHeader
+      fixSiderbar
+      logo={logo}
       navTheme="light"
       iconfontUrl="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"
-      pure={['/home/aaa'].includes(props.location.pathname)}
+      pure={['/'].includes(props.location.pathname)}
       route={{
         routes: [
           {
@@ -44,7 +47,7 @@ const Layout = (props: IRouteComponentProps) => {
         pathname: props.location.pathname,
       }}
     >
-      <PageContainer breadcrumbRender={false}>{props.children}</PageContainer>
+      {props.children}
     </ProLayout>
   );
 };
