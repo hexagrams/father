@@ -17,9 +17,19 @@ const Layout = (props: IRouteComponentProps) => {
       route={{
         routes: [
           {
-            path: '/qian/product',
-            name: '收藏',
+            path: '/qian',
+            name: '项目管理',
             icon: 'icon-shoucang1',
+            children: [
+              {
+                path: '/qian/product',
+                name: '产品管理',
+              },
+              {
+                path: '/qian/test',
+                name: 'test',
+              },
+            ],
           },
           {
             path: '/home1/overview',

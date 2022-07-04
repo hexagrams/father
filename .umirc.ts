@@ -30,7 +30,8 @@ export default defineConfig({
   chainWebpack(config) {},
   proxy: {
     '/api': {
-      target: 'http://127.0.0.1:7001',
+      target: 'http://linshenglong.cn',
+      // target: 'http://127.0.0.1:7001',
       changeOrigin: true,
       // pathRewrite: { '^/igate': '' },
     },
