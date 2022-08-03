@@ -57,7 +57,7 @@ const Layout = (props: IRouteComponentProps) => {
         pathname: props.location.pathname,
       }}
     >
-      {props.children}
+      <div className="father-page-content">{props.children}</div>
     </ProLayout>
   );
 };
