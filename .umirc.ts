@@ -11,6 +11,7 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  inlineLimit: 30000,
   qiankun: {
     master: {},
   },
@@ -30,6 +31,12 @@ export default defineConfig({
   chainWebpack(config) {},
   proxy: {
     '/api': {
+      //target: 'http://linshenglong.cn',
+      target: 'http://127.0.0.1:7001',
+      changeOrigin: true,
+      // pathRewrite: { '^/igate': '' },
+    },
+    '/public': {
       //target: 'http://linshenglong.cn',
       target: 'http://127.0.0.1:7001',
       changeOrigin: true,
