@@ -14,35 +14,7 @@ const Layout = (props: IRouteComponentProps) => {
       navTheme="light"
       iconfontUrl="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"
       pure={['/login'].includes(props.location.pathname)}
-      route={{
-        routes: [
-          {
-            path: '/qian',
-            name: '项目管理',
-            icon: 'icon-shoucang1',
-            children: [
-              {
-                path: '/qian/product',
-                name: '产品管理',
-              },
-              {
-                path: '/qian/test',
-                name: 'test',
-              },
-            ],
-          },
-          {
-            path: '/home1/overview',
-            name: 'FaceBook',
-            icon: 'icon-facebook',
-          },
-          {
-            path: '/home2/search',
-            name: 'Twitter',
-            icon: 'icon-twitter',
-          },
-        ],
-      }}
+      route={window.SYSTEM_CONFIG.MenuRoute}
       menuItemRender={(item, dom) => (
         <a
           onClick={() => {

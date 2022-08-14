@@ -9,10 +9,6 @@ declare module '*.svg' {
 
 declare interface Window {
   SYSTEM_CONFIG: {
-    productList: any;
-    routerConfig: {
-      menuLeftOption: any;
-    };
-    [propName: string]: any;
+    MenuRoute: import('@ant-design/pro-layout/es/typings').Route;
   };
 }
