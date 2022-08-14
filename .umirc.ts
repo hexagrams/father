@@ -3,7 +3,7 @@ import { defineConfig } from 'umi';
 export default defineConfig({
   title: false,
   history: {
-    type: 'browser',
+    type: 'hash',
   },
   favicon: 'https://s1.ax1x.com/2022/07/03/jGJ4bD.png',
   hash: false,
