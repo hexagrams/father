@@ -49,7 +49,7 @@ const Layout = (props: IRouteComponentProps) => {
             history.push(item.path || '/');
           }}
         >
-          {dom}
+          <>{dom}</>
         </a>
       )}
       rightContentRender={() => <RightContent />}
