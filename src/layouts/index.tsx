@@ -1,7 +1,35 @@
-import { IRouteComponentProps } from 'umi';
-import './index.less';
+import { ProLayout } from '@ant-design/pro-components';
+import { history, IRouteComponentProps } from 'umi';
+import RightContent from '@/components/RightContent';
+import logo from '@/static/img/liuiu6661.png';
 
 const Layout = (props: IRouteComponentProps) => {
-  return <div className="father-page">{props.children}</div>;
+  return (
+    <ProLayout
+      title=""
+      fixedHeader
+      fixSiderbar
+      logo={logo}
+      navTheme="light"
+      iconfontUrl="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"
+      pure={['/login'].includes(props.location.pathname)}
+      route={window.SYSTEM_CONFIG.MenuRoute}
+      menuItemRender={(item, dom) => (
+        <a
+          onClick={() => {
+            history.push(item.path || '/');
+          }}
+        >
+          <>{dom}</>
+        </a>
+      )}
+      rightContentRender={() => <RightContent />}
+      location={{
+        pathname: props.location.pathname,
+      }}
+    >
+      <div className="father-page-content">{props.children}</div>
+    </ProLayout>
+  );
 };
 export default Layout;

@@ -11,6 +11,8 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  ignoreMomentLocale: true,
+  webpack5: {},
   fastRefresh: {},
   proxy: {
     '/api': {
