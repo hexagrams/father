@@ -8,6 +8,11 @@ export default defineConfig({
   iceStark: {
     master: {},
   },
+  publicPath: '/public/productList/father/',
+  dynamicImport: {
+    loading: '@/components/Loading',
+  },
+  inlineLimit: 30000,
   nodeModulesTransform: {
     type: 'none',
   },
