@@ -20,6 +20,7 @@ const Layout = (props: IRouteComponentProps) => {
       collapsed={collapsed}
       onCollapse={setCollapsed}
       route={window.SYSTEM_CONFIG.MenuRoute}
+      collapsedButtonRender={false}
       headerContentRender={() => {
         return (
           <div
