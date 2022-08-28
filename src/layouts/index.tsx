@@ -7,7 +7,6 @@ import logo from '@/static/img/liuiu6661.png';
 
 const Layout = (props: IRouteComponentProps) => {
   const [collapsed, setCollapsed] = useState(false);
-
   return (
     <ProLayout
       title=""
