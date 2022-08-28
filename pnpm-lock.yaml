@@ -4,7 +4,7 @@ specifiers:
   '@ant-design/icons': ^4.7.0
   '@ant-design/pro-components': ^1.1.18
   '@ant-design/pro-layout': ^6.38.19
-  '@hexagrams/plugin-ice-stark': ^0.0.4
+  '@hexagrams/plugin-ice-stark': ^0.0.8
   '@ice/stark': ^2.7.3
   '@types/react': ^17.0.0
   '@types/react-dom': ^17.0.0
@@ -25,7 +25,7 @@ dependencies:
   '@ant-design/icons': 4.7.0_sfoxds7t5ydpegc3knd667wn6m
   '@ant-design/pro-components': 1.1.18_sfoxds7t5ydpegc3knd667wn6m
   '@ant-design/pro-layout': registry.npmmirror.com/@ant-design/pro-layout/6.38.19_sfoxds7t5ydpegc3knd667wn6m
-  '@hexagrams/plugin-ice-stark': 0.0.4_react@17.0.2
+  '@hexagrams/plugin-ice-stark': registry.npmmirror.com/@hexagrams/plugin-ice-stark/0.0.8
   '@ice/stark': 2.7.3_react@17.0.2
   antd: 4.22.7_sfoxds7t5ydpegc3knd667wn6m
   classnames: registry.npmmirror.com/classnames/2.3.1
@@ -477,21 +477,8 @@ packages:
     deprecated: the package is rather renamed to @formatjs/ecma-abstract with some changes in functionality (primarily selectUnit is removed and we don't plan to make any further changes to this package
     dev: true
 
-  /@hexagrams/plugin-ice-stark/0.0.4_react@17.0.2:
-    resolution: {integrity: sha512-R1IHmwGCdaEt6XykfZ4foztBgeZ4ybf3QuxkGQqc0AamxiI44jTWOS/HJgYtgOYHdPEYHWtiTpj8TogQMyLU9g==}
-    dependencies:
-      '@ice/stark': 2.7.3_react@17.0.2
-      '@ice/stark-app': 1.5.0
-    transitivePeerDependencies:
-      - react
-    dev: false
-
   /@ice/sandbox/1.1.4:
     resolution: {integrity: sha512-MEVF0Ze3McKDutnFiUAhUoc+WwOFxITVBgSSHmbGpKtWbXJX9kUVlx3VsEVJvdqU3O1kiBNx6zE1sFMjKPRTIQ==}
-    dev: false
-
-  /@ice/stark-app/1.5.0:
-    resolution: {integrity: sha512-9fuCri48eZj6TnfPkCju4vVLhGurz+mt6lFx4JQFHhnRBQ5MuiBqRZg5F/3vdnJ7dAYQJlCXmHlQtBHok82z+g==}
     dev: false
 
   /@ice/stark/2.7.3_react@17.0.2:
@@ -6796,6 +6783,12 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  registry.npmmirror.com/@hexagrams/plugin-ice-stark/0.0.8:
+    resolution: {integrity: sha512-3/rlxzDyh9NdiugUh+FeWdrw5lhKydIJ/rYlAb5uz80M89mOAHWMbV853N0PAcBuUMZXeCL1l4HyVtBXz38zcQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@hexagrams/plugin-ice-stark/-/plugin-ice-stark-0.0.8.tgz}
+    name: '@hexagrams/plugin-ice-stark'
+    version: 0.0.8
+    dev: false
 
   registry.npmmirror.com/@humanwhocodes/config-array/0.5.0:
     resolution: {integrity: sha512-FagtKFz74XrTl7y6HCzQpwDfXP0yhxe9lHLD1UZxjvZIcbyRz8zTFF/yYNfSfzU414eDwZ1SrO0Qvtyf+wFMQg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@humanwhocodes/config-array/-/config-array-0.5.0.tgz}
