@@ -21,7 +21,7 @@ export default defineConfig({
   fastRefresh: {},
   proxy: {
     '/api': {
-      target: 'http://127.0.0.1:7001',
+      target: 'https://linshenglong.cn',
     },
   },
 });

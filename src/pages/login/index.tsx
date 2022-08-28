@@ -18,7 +18,7 @@ export default () => {
     <div style={{ backgroundColor: 'white', height: 'calc(100vh - 48px)', margin: -24 }}>
       <LoginFormPage
         onFinish={async () => {
-          history.push('/qian/product');
+          history.push('/system/app');
         }}
         backgroundImageUrl="https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png"
         logo={logo}
