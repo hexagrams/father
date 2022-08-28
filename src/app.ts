@@ -1,3 +1,5 @@
+import Loading from '@/components/Loading';
+
 export const iceStark = fetch('/api/system/config')
   .then((res) => res.json())
   .then(({ data }) => {
@@ -9,6 +11,9 @@ export const iceStark = fetch('/api/system/config')
       };
     }
     return {
+      appRouter: {
+        LoadingComponent: Loading,
+      },
       apps: data.apps,
     };
   });

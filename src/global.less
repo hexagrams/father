@@ -37,9 +37,21 @@ body {
 }
 
 #root,
+#icestarkNode,
 .father-page-content {
   height: 100%;
   width: 100%;
+}
+
+.father-page-content {
+  > div {
+    height: 100%;
+    width: 100%;
+    > div {
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
 
 /* 短引用的内容可取值：''或"" */
