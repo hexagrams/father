@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import { LockOutlined, MobileOutlined, UserOutlined } from '@ant-design/icons';
-import { LoginFormPage, ProFormCaptcha, ProFormCheckbox, ProFormText } from '@ant-design/pro-components';
+import {
+  LoginFormPage,
+  ProFormCaptcha,
+  ProFormCheckbox,
+  ProFormText,
+} from '@ant-design/pro-components';
 import { message, Tabs } from 'antd';
 import logo from '@/static/img/liuiu6661.png';
 import { history } from 'umi';
@@ -12,9 +17,8 @@ export default () => {
   return (
     <div style={{ backgroundColor: 'white', height: 'calc(100vh - 48px)', margin: -24 }}>
       <LoginFormPage
-        onFinish={async (values) => {
+        onFinish={async () => {
           history.push('/qian/product');
-          console.log(values);
         }}
         backgroundImageUrl="https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png"
         logo={logo}
