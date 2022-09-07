@@ -11,4 +11,5 @@ declare interface Window {
   SYSTEM_CONFIG: {
     MenuRoute: import('@ant-design/pro-layout/es/typings').Route;
   };
+  ace: any;
 }

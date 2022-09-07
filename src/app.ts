@@ -12,6 +12,9 @@ export const iceStark = fetch('/api/system/config')
     }
     return {
       appRouter: {
+        onAppLeave: () => {
+          window.ace = null;
+        },
         LoadingComponent: Loading,
       },
       apps: data.apps,
