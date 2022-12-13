@@ -8,12 +8,15 @@ import {
 } from '@ant-design/pro-components';
 import { message, Tabs } from 'antd';
 import logo from '@/static/img/liuiu6661.png';
-import { history, request } from 'umi';
+import { request } from 'umi';
 
 type LoginType = 'phone' | 'account';
 
 export default () => {
   const [loginType, setLoginType] = useState<LoginType>('account');
+  if (window.baseConfig.userInfo.menuConfig) {
+    window.location.href = window.baseConfig.backURL;
+  }
   return (
     <div style={{ backgroundColor: 'white', height: 'calc(100vh)' }}>
       <LoginFormPage
@@ -23,7 +26,7 @@ export default () => {
             method: 'POST',
           });
           if (response.success) {
-            history.push(window.baseConfig.backURL);
+            window.location.href = window.baseConfig.backURL;
           }
         }}
         backgroundImageUrl="https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png"

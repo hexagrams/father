@@ -14,7 +14,7 @@ export const request: RequestConfig = {
 };
 
 export const iceStark = () => {
-  const userInfo = JSON.parse(window?.baseConfig?.userInfo || '{}');
+  const userInfo = window?.baseConfig?.userInfo || {};
   return {
     appRouter: {
       onAppLeave: () => {
