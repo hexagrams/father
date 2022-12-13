@@ -7,6 +7,7 @@ import logo from '@/static/img/liuiu6661.png';
 
 const Layout = (props: IRouteComponentProps) => {
   const [collapsed, setCollapsed] = useState(false);
+  const menuConfig = JSON.parse(window?.baseConfig?.userInfo?.menuConfig || '{}');
   return (
     <ProLayout
       title=""
@@ -15,10 +16,10 @@ const Layout = (props: IRouteComponentProps) => {
       logo={logo}
       navTheme="light"
       iconfontUrl="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"
-      pure={['/login'].includes(props.location.pathname)}
+      pure={['/'].includes(props.location.pathname)}
       collapsed={collapsed}
       onCollapse={setCollapsed}
-      route={window.SYSTEM_CONFIG.MenuRoute}
+      route={menuConfig?.menuList || []}
       collapsedButtonRender={false}
       headerContentRender={() => {
         return (

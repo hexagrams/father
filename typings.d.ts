@@ -12,4 +12,9 @@ declare interface Window {
     MenuRoute: import('@ant-design/pro-layout/es/typings').Route;
   };
   ace: any;
+  baseConfig: {
+    backURL: string;
+    csrf: string;
+    userInfo: any;
+  };
 }

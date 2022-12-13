@@ -1,22 +1,27 @@
+import { RequestConfig } from 'umi';
 import Loading from '@/components/Loading';
 
-export const iceStark = fetch('/api/system/config')
-  .then((res) => res.json())
-  .then(({ data }) => {
-    if (window.SYSTEM_CONFIG) {
-      window.SYSTEM_CONFIG.MenuRoute = data.menuRoute;
-    } else {
-      window.SYSTEM_CONFIG = {
-        MenuRoute: data.menuRoute,
+export const request: RequestConfig = {
+  errorConfig: {
+    adaptor: (resData) => {
+      return {
+        ...resData,
+        success: resData.success,
+        errorMessage: resData.message,
       };
-    }
-    return {
-      appRouter: {
-        onAppLeave: () => {
-          window.ace = null;
-        },
-        LoadingComponent: Loading,
+    },
+  },
+};
+
+export const iceStark = () => {
+  const userInfo = JSON.parse(window?.baseConfig?.userInfo || '{}');
+  return {
+    appRouter: {
+      onAppLeave: () => {
+        window.ace = null;
       },
-      apps: data.apps,
-    };
-  });
+      LoadingComponent: Loading,
+    },
+    apps: userInfo?.apps || [],
+  };
+};

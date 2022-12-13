@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "umi dev",
+    "dev": "umi dev",
     "build": "umi build",
     "postinstall": "umi generate tmp",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
@@ -25,7 +25,7 @@
     "@ant-design/icons": "^4.7.0",
     "@ant-design/pro-components": "^1.1.18",
     "@ant-design/pro-layout": "^6.38.19",
-    "@hexagrams/plugin-ice-stark": "0.0.9",
+    "@hexagrams/plugin-ice-stark": "^0.0.12",
     "@ice/stark": "^2.7.3",
     "antd": "^4.22.7",
     "classnames": "^2.3.1",

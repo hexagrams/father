@@ -8,17 +8,23 @@ import {
 } from '@ant-design/pro-components';
 import { message, Tabs } from 'antd';
 import logo from '@/static/img/liuiu6661.png';
-import { history } from 'umi';
+import { history, request } from 'umi';
 
 type LoginType = 'phone' | 'account';
 
 export default () => {
   const [loginType, setLoginType] = useState<LoginType>('account');
   return (
-    <div style={{ backgroundColor: 'white', height: 'calc(100vh - 48px)', margin: -24 }}>
+    <div style={{ backgroundColor: 'white', height: 'calc(100vh)' }}>
       <LoginFormPage
-        onFinish={async () => {
-          history.push('/system/app');
+        onFinish={async (v) => {
+          const response = await request('/node/login', {
+            data: v,
+            method: 'POST',
+          });
+          if (response.success) {
+            history.push(window.baseConfig.backURL);
+          }
         }}
         backgroundImageUrl="https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png"
         logo={logo}
@@ -37,7 +43,7 @@ export default () => {
                 size: 'large',
                 prefix: <UserOutlined className={'prefixIcon'} />,
               }}
-              placeholder={'用户名: admin'}
+              placeholder={'用户名: test'}
               rules={[
                 {
                   required: true,
@@ -51,7 +57,7 @@ export default () => {
                 size: 'large',
                 prefix: <LockOutlined className={'prefixIcon'} />,
               }}
-              placeholder={'密码: admin@123'}
+              placeholder={'密码: test'}
               rules={[
                 {
                   required: true,
@@ -117,13 +123,13 @@ export default () => {
           <ProFormCheckbox noStyle name="autoLogin">
             自动登录
           </ProFormCheckbox>
-          <a
+          {/* <a
             style={{
               float: 'right',
             }}
           >
             忘记密码
-          </a>
+          </a> */}
         </div>
       </LoginFormPage>
     </div>
