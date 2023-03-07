@@ -15,7 +15,7 @@ type LoginType = 'phone' | 'account';
 export default () => {
   const [loginType, setLoginType] = useState<LoginType>('account');
   if (window?.baseConfig?.userInfo?.menuConfig) {
-    window.location.href = window.baseConfig.backURL;
+    window.location.href = window?.baseConfig?.backURL;
   }
   return (
     <div style={{ backgroundColor: 'white', height: 'calc(100vh)' }}>

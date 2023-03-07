@@ -5,11 +5,10 @@ export default defineConfig({
   history: {
     type: 'browser',
   },
-  base: '/login',
   iceStark: {
     master: {},
   },
-  publicPath: '/public/productList/father/',
+  runtimePublicPath: true,
   dynamicImport: {
     loading: '@/components/Loading',
   },
