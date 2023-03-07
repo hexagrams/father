@@ -14,7 +14,7 @@ type LoginType = 'phone' | 'account';
 
 export default () => {
   const [loginType, setLoginType] = useState<LoginType>('account');
-  if (window.baseConfig.userInfo.menuConfig) {
+  if (window?.baseConfig?.userInfo?.menuConfig) {
     window.location.href = window.baseConfig.backURL;
   }
   return (
@@ -31,8 +31,8 @@ export default () => {
         }}
         backgroundImageUrl="https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png"
         logo={logo}
-        title="Liuiu666"
-        subTitle="越努力越幸运！"
+        title="畅游"
+        subTitle="你行,我行,携手同行,畅行天下!"
       >
         <Tabs activeKey={loginType} onChange={(activeKey) => setLoginType(activeKey as LoginType)}>
           <Tabs.TabPane key={'account'} tab={'账号密码登录'} />
@@ -46,11 +46,11 @@ export default () => {
                 size: 'large',
                 prefix: <UserOutlined className={'prefixIcon'} />,
               }}
-              placeholder={'用户名: test'}
+              placeholder={'请输入帐号'}
               rules={[
                 {
                   required: true,
-                  message: '请输入用户名!',
+                  message: '请输入帐号!',
                 },
               ]}
             />
@@ -60,7 +60,7 @@ export default () => {
                 size: 'large',
                 prefix: <LockOutlined className={'prefixIcon'} />,
               }}
-              placeholder={'密码: test'}
+              placeholder={'请输入密码'}
               rules={[
                 {
                   required: true,
@@ -126,13 +126,13 @@ export default () => {
           <ProFormCheckbox noStyle name="autoLogin">
             自动登录
           </ProFormCheckbox>
-          {/* <a
+          <a
             style={{
               float: 'right',
             }}
           >
             忘记密码
-          </a> */}
+          </a>
         </div>
       </LoginFormPage>
     </div>
