@@ -25,8 +25,6 @@
     "@ant-design/icons": "^4.7.0",
     "@ant-design/pro-components": "^1.1.18",
     "@ant-design/pro-layout": "^6.38.19",
-    "@hexagrams/plugin-ice-stark": "^0.0.12",
-    "@ice/stark": "^2.7.3",
     "antd": "^4.22.7",
     "classnames": "^2.3.1",
     "react": "17.x",
