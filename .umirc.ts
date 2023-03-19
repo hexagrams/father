@@ -1,6 +1,8 @@
 import { defineConfig } from 'umi';
+import baseConfig from '@hexagrams/base-config';
 
 export default defineConfig({
+  ...baseConfig.umi,
   history: {
     type: 'browser',
   },
@@ -8,7 +10,6 @@ export default defineConfig({
   dynamicImport: {
     loading: '@/components/Loading',
   },
-  inlineLimit: 30000,
   nodeModulesTransform: {
     type: 'none',
   },
