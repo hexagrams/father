@@ -22,6 +22,9 @@ export default () => {
       <LoginFormPage
         onFinish={async (v) => {
           const response = await request('/node/login', {
+            headers: {
+              csrftoken: window?.baseConfig?.csrf,
+            },
             data: v,
             method: 'POST',
           });
