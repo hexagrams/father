@@ -7,7 +7,7 @@ import {
   ProFormText,
 } from '@ant-design/pro-components';
 import { message, Tabs } from 'antd';
-import logo from '@/static/img/liuiu6661.png';
+// import logo from '@/static/img/liuiu6661.png';
 import { request } from 'umi';
 
 type LoginType = 'phone' | 'account';
@@ -33,9 +33,9 @@ export default () => {
           }
         }}
         backgroundImageUrl="https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png"
-        logo={logo}
-        title="畅游"
-        subTitle="你行,我行,携手同行,畅行天下!"
+        logo={'https://xuexia-mall.oss-cn-hangzhou.aliyuncs.com/logo/logo.jpg'}
+        // title="畅游"
+        subTitle="管旅游·用畅游"
       >
         <Tabs activeKey={loginType} onChange={(activeKey) => setLoginType(activeKey as LoginType)}>
           <Tabs.TabPane key={'account'} tab={'账号密码登录'} />
