@@ -7,7 +7,7 @@ import {
   ProFormText,
 } from '@ant-design/pro-components';
 import { message, Tabs } from 'antd';
-// import logo from '@/static/img/liuiu6661.png';
+ import logo from '@/static/img/logo.png';
 import { request } from 'umi';
 
 type LoginType = 'phone' | 'account';
@@ -32,8 +32,8 @@ export default () => {
             window.location.href = window.baseConfig.backURL;
           }
         }}
-        backgroundImageUrl="https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png"
-        logo={'https://xuexia-mall.oss-cn-hangzhou.aliyuncs.com/logo/logo.jpg'}
+        backgroundImageUrl="https://xuexia-mall.oss-cn-hangzhou.aliyuncs.com/logo/bj.jpg"
+        logo={'https://xuexia-mall.oss-cn-hangzhou.aliyuncs.com/logo/logo.png'}
         // title="畅游"
         subTitle="管旅游·用畅游"
       >
