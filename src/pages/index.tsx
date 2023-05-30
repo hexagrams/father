@@ -7,7 +7,7 @@ import {
   ProFormText,
 } from '@ant-design/pro-components';
 import { message, Tabs } from 'antd';
- import logo from '@/static/img/logo.png';
+//  import logo from '@/static/img/logo.png';
 import { request } from 'umi';
 
 type LoginType = 'phone' | 'account';
@@ -17,6 +17,7 @@ export default () => {
   if (window?.baseConfig?.userInfo?.menuConfig) {
     window.location.href = window?.baseConfig?.backURL;
   }
+  // document.title='畅游-管旅游·用畅游'
   return (
     <div style={{ backgroundColor: 'white', height: 'calc(100vh)' }}>
       <LoginFormPage

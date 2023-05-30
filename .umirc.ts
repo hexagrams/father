@@ -1,6 +1,8 @@
 import { defineConfig } from 'umi';
+import baseConfig from '@hexagrams/base-config';
 
 export default defineConfig({
+  ...baseConfig.umi,
   history: {
     type: 'browser',
   },
@@ -11,6 +13,7 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  title: '畅游-管旅游·用畅游',
   inlineLimit: 30000,
   ignoreMomentLocale: true,
   webpack5: {},
